@@ -1,0 +1,272 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+:root{
+    --main-bg-color:#F6F8FF;
+    --title-div-text-color:#4B6A9B;
+    --search-bar-div-bg-color:#FEFEFE;
+    --search-bar-text-color:#4B6A9B;
+    --search-bar-input-bg-color:white;
+
+    --box-shadow-color:lightGrey;
+
+    --display-card-div-bg-color:#FEFEFE;
+    --userName-text-color:black;
+    --userJoinDate-text-color:#4B6A9B;
+    --userDescription-text-color:#4B6A9B;
+    --repo-follower-following-heading-color:#4B6A9B;
+    --repo-div-bg-color:#F6F8FF;
+    --userRepo-text-color:black;
+    /* --userFollowers-text-color:black;
+    --userFollowing-text-color:black; */
+    --links-div-text-color:#4B6A9B;
+    --links-div-img-color:#4B6A9B;
+}
+
+/* Dark mode */
+.dark-mode{
+    --main-bg-color:#141D2F;
+    --title-div-text-color:white;
+    --search-bar-div-bg-color:#1E2A47;
+    --search-bar-text-color:white;
+    --search-bar-input-bg-color:#1E2A47;
+    --box-shadow-color:#18233E;
+    --display-card-div-bg-color:#1E2A47;
+    --userName-text-color:white;
+    --userJoinDate-text-color:white;
+    --userDescription-text-color:white;
+    --repo-follower-following-heading-color:white;
+    --repo-div-bg-color:#141D2F;
+    --userRepo-text-color:white;
+    --links-div-text-color:white;
+}
+
+.wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+
+/* Title Section CSS */
+.title-div{
+    display: flex;
+    flex-direction: row;
+    color: var(--title-div-text-color);
+    width: 50%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.dark-light-mode-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+
+/* Search Bar CSS */
+.search-bar-div{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    background-color: var(--search-bar-div-bg-color);
+    border-radius: 1rem;
+    padding: 10px 10px;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px 10px var(--box-shadow-color);
+    margin-bottom: 20px;
+    
+}
+.search-bar-div label{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search-bar-div label img{
+    height: 30px;
+}
+#searchBar{
+    border: none;
+    width: 400px;
+    font-size: 20px;
+    color: var(--search-bar-text-color);
+    outline: none;
+    background-color: var(--search-bar-input-bg-color);
+    
+}
+.search-bar-div button{
+    background-color: #0079ff;
+    border-radius: 1rem;
+    border: none;
+    padding: 15px 15px;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.search-bar-div button:hover{
+    background-color: lightblue;
+}
+[noResultsFound]{
+    color: red;
+    padding-top: 15px;
+    font-weight: bolder;
+    font-size: 18px;
+    display: none;
+}
+[noResultsFound].active{
+    display: block;
+}
+
+[clickRemoveBtn]{
+    display: none;
+}
+[clickRemoveBtn].active{
+    display: block;
+}
+[clickRemoveBtn].active:hover{
+    cursor: pointer;
+}
+
+/* Card Display CSS */
+.display-card-div{
+    margin-top: 20px;
+    display: flex;
+    background-color: var(--display-card-div-bg-color);
+    gap: 70px;
+    width: 50%;
+    border-radius: 1rem;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px 10px var(--box-shadow-color);
+}
+.left-div{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.left-div img{
+    border-radius: 5rem;
+    width: 111px;
+    height: 111px;
+    transform: scale(1.2,1.2);
+}
+.right-div{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    width: 100%;
+}
+.name-and-join-date-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.name-and-join-date-div h1{
+    color: var(--userName-text-color);
+}
+.name-and-join-date-div p{
+    color: var(--userJoinDate-text-color);
+}
+.desc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    color: var(--userDescription-text-color);
+}
+
+.repo-follower-following-repo{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: var(--repo-div-bg-color);
+    color: var(--repo-follower-following-heading-color);
+    margin-bottom: 10px;
+}
+.rff{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.rff p:last-of-type{
+    color: var(--userRepo-text-color);
+}
+
+.links-div{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: var(--links-div-text-color);
+    gap: 30px;
+}
+.top-link-div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.bottom-link-div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.location-div, .twitter-div, .website-div, .company-div{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+[userTwitter]{
+    color: var(--links-div-text-color);
+}
+[userTwitter].notAvailable{
+    color: lightGrey;
+}
+
+[userLocation]{
+    color: var(--links-div-text-color);
+}
+[userLocation].notAvailable{
+    color: lightGrey;
+}
+
+[userCompany]{
+    color: var(--links-div-text-color);
+}
+[userCompany].notAvailable{
+    color: lightGrey;
+}
+
+[userWebsite]{
+    color: var(--links-div-text-color);
+}
+[userWebsite].notAvailable{
+    color: lightGrey;
+}
+
+[userId]{
+    color: #0079ff;
+}

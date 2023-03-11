@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <link rel="icon" type="image/x-icon" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!-- Title Section -->
+        <div class="title-div">
+            <h1>DevDetective</h1>
+            <div class="dark-light-mode-div">
+                <p currentThemeName>LIGHT</p> 
+                <img src="images\moon-icon.svg" currentThemeIcon>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar-div">
+            <label for="searchBar">
+                <img src="images\search-icon.svg">
+                <input type="text" placeholder="Enter a Github Username. . ." id="searchBar" required>
+                <p clickRemoveBtn>✖</p>
+            </label>
+            
+            <p noResultsFound>No Results Found</p>
+            <button searchBtn>Search</button>
+        </div>
+
+        <!-- Card Display -->
+        <div class="display-card-div">
+            <div class="left-div">
+                <img src="https://assets.vogue.in/photos/62555bf78378e23b86a2e549/1:1/w_2000,h_2000,c_limit/blackpink%20jennie%20kim.jpg" 
+                alt=""  userImage>
+            </div>
+
+            <div class="right-div">
+                <div class="name-and-join-date-div">
+                    <h1 userName>Jennie Kim</h1>
+                    <p userJoinDate>Joined 05 May 2010</p>
+                </div>
+                <a href="#" userId>@jenniekim007</a>
+                <p class="desc" userDescription>
+                    Jennie Kim, known mononymously as Jennie, is a South Korean singer and rapper. 
+                    Born and raised in South Korea, Jennie studied in New Zealand for five years before returning to South Korea in 2010.
+                    
+                </p>
+                
+                <div class="repo-follower-following-repo">
+                    <div class="rff">
+                        <p>Repos</p>
+                        <p userRepoCount>965</p>
+                    </div >
+                    <div class="rff">
+                        <p>Followers</p>
+                        <p userFollowers>75.3M</p>
+                    </div>
+                    <div class="rff">
+                        <p>Following</p>
+                        <p userFollowing>0</p>
+                    </div>
+                </div>
+
+                <div class="links-div">
+                    <div class="top-link-div">
+                        <div class="location-div">
+                            <img src="images\location-icon.svg">
+                            <p userLocation>Seoul, South Korea</p>
+                        </div>
+                        
+                        <div class="twitter-div">
+                            <img src="images\twitter-icon.svg">
+                            <p><a href="" userTwitter>jennierubyjane</a></p>
+                        </div>
+                    </div>
+
+                    <div class="bottom-link-div">
+                        <div class="website-div">
+                            <img src="images\website-icon.svg">
+                            <p><a href="" userWebsite >https://www.jennierubyjane.com</a></p>
+                        </div>
+                        <div class="company-div">
+                            <img src="images\company-icon.svg">
+                            <p userCompany>BlackPink</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
