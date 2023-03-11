@@ -152,6 +152,7 @@
     padding-right: 10px;
     justify-content: space-between;
     box-shadow: 10px 10px 10px 10px var(--box-shadow-color);
+    flex-direction: row;
 }
 .left-div{
     padding-left: 20px;
@@ -167,7 +168,7 @@
     display: flex;
     flex-direction: column;
     padding-right: 50px;
-    width: 100%;
+    width: auto;
 }
 .name-and-join-date-div{
     display: flex;
@@ -214,6 +215,54 @@
     margin-bottom: 30px;
     color: var(--links-div-text-color);
     gap: 30px;
+}
+@media (max-width:1490px) {
+    .links-div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .name-and-join-date-div{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .display-card-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-div{
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .left-div{
+        justify-content: center;
+        align-items: center;
+    }
+    .display-card-div{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .repo-follower-following-repo{
+    width: 80%;
+    }
+    [searchBtn]{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #searchBar{
+        width:auto;
+    }
+    
+}
+@media (max-width:700px){
+    .title-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .top-link-div{
     width: 80%;
